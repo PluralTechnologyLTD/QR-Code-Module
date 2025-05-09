@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Info</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-4 text-center text-gray-700">Project Information</h1>
+    <p><strong>Project Name:</strong> {{ project.project_name }}</p>
+    <p><strong>FOV:</strong> {{ project.fov }}</p>
+    <p><strong>Models Used:</strong> {{ project.models_used }}</p>
+    <p><strong>Timestamp:</strong> {{ project.timestamp }}</p>
+  </div>
+</body>
+</html>

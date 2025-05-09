@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Display</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+  <div class="bg-white p-6 rounded-2xl shadow-md w-full max-w-md text-center">
+    <h2 class="text-xl font-semibold mb-4 text-gray-800">Your QR Code</h2>
+    <img src="{{ qr_url }}" alt="QR Code" class="mx-auto w-48 h-48 mb-4">
+    <p class="text-sm text-gray-500 break-all">Scan this QR or click below:</p>
+    <a href="{{ info_url }}" class="text-blue-500 underline text-sm break-words">{{ info_url }}</a>
+  </div>
+</body>
+</html>

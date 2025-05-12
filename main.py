@@ -64,7 +64,8 @@ async def generate_qr(request: Request):
 
     if project:
         qr_code_data = f"{project_name}-{fov}"
-        qr = qrcode.make(f"http://127.0.0.1:8000/qr_info/{qr_code_data}")
+        public_url = "https://qr-code-module.onrender.com"
+        qr = qrcode.make(f"{public_url}/qr_info/{qr_code_data}")
         os.makedirs("static/qrcodes", exist_ok=True)
         file_name = f"{uuid.uuid4()}.png"
         path = f"static/qrcodes/{file_name}"
@@ -75,7 +76,7 @@ async def generate_qr(request: Request):
             {
                 "request": request,
                 "qr_url": f"/{path}",
-                "info_url": f"http://127.0.0.1:8000/qr_info/{qr_code_data}",
+                "info_url": f"{public_url}/qr_info/{qr_code_data}",
             },
         )
     else:
